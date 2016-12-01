@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SpringBootStarterProject/src/main/resources/Stopgroups.json&apos; to &apos;stopgroups.json&apos;" description="Rename resource &apos;Stopgroups.json&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/Stopgroups.json" name="stopgroups.json" stamp="1480593882017" updateReferences="true"/>
+</session>
