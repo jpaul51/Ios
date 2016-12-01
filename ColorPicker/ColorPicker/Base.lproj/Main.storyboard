@@ -35,6 +35,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="background" destination="8bC-Xf-vdC" id="zF4-eq-qwO"/>
                         <outlet property="pickColorButton" destination="QFg-vw-Xn6" id="dFL-e7-wzE"/>
                     </connections>
                 </viewController>
@@ -42,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Color Picker View Controller-->
         <scene sceneID="k35-lb-JPL">
             <objects>
-                <viewController id="ZPK-Cb-m63" sceneMemberID="viewController">
+                <viewController id="ZPK-Cb-m63" customClass="ColorPickerViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OBr-Hb-uKt"/>
                         <viewControllerLayoutGuide type="bottom" id="fHo-h6-rcI"/>
@@ -53,12 +54,51 @@
                     <view key="view" contentMode="scaleToFill" id="dy9-rd-qQ3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZt-nS-Wbx">
+                                <frame key="frameInset" minX="96" minY="79" width="182" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select color"/>
+                                <connections>
+                                    <action selector="returnHome:" destination="ZPK-Cb-m63" eventType="touchUpInside" id="zy8-is-bIM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cn9-vb-wH0">
+                                <frame key="frameInset" minX="139" minY="136" width="96" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="green"/>
+                                <connections>
+                                    <action selector="sendGreen:" destination="ZPK-Cb-m63" eventType="touchUpInside" id="xo7-EG-MDU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REh-t9-oIY">
+                                <frame key="frameInset" minX="139" minY="266" width="96" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="orange"/>
+                                <connections>
+                                    <action selector="sendOrange:" destination="ZPK-Cb-m63" eventType="touchUpInside" id="upS-lW-QV8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F90-ta-ER5">
+                                <frame key="frameInset" minX="139" minY="420" width="96" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="red"/>
+                                <connections>
+                                    <action selector="sendRed:" destination="ZPK-Cb-m63" eventType="touchUpInside" id="dtP-rd-rSW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVV-1i-0wE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="124"/>
+            <point key="canvasLocation" x="936.79999999999995" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="green" width="96" height="96"/>
+        <image name="orange" width="96" height="96"/>
+        <image name="red" width="96" height="96"/>
+    </resources>
 </document>
